@@ -1,66 +1,94 @@
-<a href="https://www.breatheco.de"><img height="280" align="right" src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/badge.png?raw=true"></a>
+Star Wars API
 
-# Flask Boilerplate for Junior Developers
+This project is a RESTful API that provides detailed information about the Star Wars universe, including characters, planets, and starships.
 
-Create flask API's in minutes, [📹 watch the video tutorial](https://youtu.be/ORxQ-K3BzQA).
+Features
 
-- [Extensive documentation here](https://start.4geeksacademy.com).
-- Integrated with Pipenv for package managing.
-- Fast deloyment to render.com or heroku with `$ pipenv run deploy`.
-- Use of `.env` file.
-- SQLAlchemy integration for database abstraction.
+	•	Character Information: Retrieve data on various characters, such as names, species, and affiliations.
+	•	Planet Details: Access information about planets, including climate, population, and terrain.
+	•	Starship Data: Obtain specifications of starships, like model, manufacturer, and hyperdrive rating.
 
-## 1) Installation
+Installation
 
-This template installs itself in a few seconds if you open it for free with Codespaces (recommended) or Gitpod.
-Skip this installation steps and jump to step 2 if you decide to use any of those services.
+To set up the project locally:
+	1.	Clone the repository:
 
-> Important: The boiplerplate is made for python 3.10 but you can change the `python_version` on the Pipfile.
+git clone https://github.com/cesarcm5/Star-Wars-API.git
 
-The following steps are automatically runned withing gitpod, if you are doing a local installation you have to do them manually:
 
-```sh
-pipenv install;
-psql -U root -c 'CREATE DATABASE example;'
-pipenv run init;
-pipenv run migrate;
-pipenv run upgrade;
-```
+	2.	Navigate to the project directory:
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+cd Star-Wars-API
 
-## 2) How to Start coding
 
-There is an example API working with an example database. All your application code should be written inside the `./src/` folder.
+	3.	Install the required dependencies:
 
-- src/main.py (it's where your endpoints should be coded)
-- src/models.py (your database tables and serialization logic)
-- src/utils.py (some reusable classes and functions)
-- src/admin.py (add your models to the admin and manage your data easily)
+pipenv install
 
-For a more detailed explanation, look for the tutorial inside the `docs` folder.
 
-## Remember to migrate every time you change your models
+	4.	Activate the virtual environment:
 
-You have to migrate and upgrade the migrations for every update you make to your models:
+pipenv shell
 
-```bash
-$ pipenv run migrate # (to make the migrations)
-$ pipenv run upgrade  # (to update your databse with the migrations)
-```
 
-## Check your API live
+	5.	Set up the database:
 
-1. Once you run the `pipenv run start` command your API will start running live and you can open it by clicking in the "ports" tab and then clicking "open browser".
+pipenv run init
+pipenv run migrate
+pipenv run upgrade
 
-> ✋ If you are working on a coding cloud like [Codespaces](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace#sharing-a-port) or [Gitpod](https://www.gitpod.io/docs/configure/workspaces/ports#configure-port-visibility) make sure that your forwared port is public.
 
-## Publish/Deploy your website!
+	6.	Run the application:
 
-This boilerplate it's 100% read to deploy with Render.com and Herkou in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
+pipenv run start
 
-### Contributors
+The API will be accessible at http://localhost:5000.
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+Usage
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+Once the application is running, you can access various endpoints to retrieve information:
+	•	Characters:
+
+GET /characters
+
+
+	•	Planets:
+
+GET /planets
+
+
+	•	Starships:
+
+GET /starships
+
+
+
+Contributing
+
+Contributions are welcome! To contribute:
+	1.	Fork the repository.
+	2.	Create a new branch:
+
+git checkout -b feature/YourFeatureName
+
+
+	3.	Make your changes and commit them:
+
+git commit -m 'Add some feature'
+
+
+	4.	Push to the branch:
+
+git push origin feature/YourFeatureName
+
+
+	5.	Open a pull request.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+
+This project is a fork of the 4GeeksAcademy/flask-rest-hello repository.
+
